@@ -1,6 +1,6 @@
 # GCP Billing Guard
 
-Tự động disable billing GCP khi tổng chi phí billing account đạt 100% budget. Tự động re-enable vào ngày 1 mỗi tháng.
+Automatically disable GCP billing when total cost on a billing account reaches 100% of the budget. Automatically re-enables on the 1st of each month.
 
 ## Architecture
 
