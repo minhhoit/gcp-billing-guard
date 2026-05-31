@@ -45,7 +45,7 @@ gcloud beta billing accounts add-iam-policy-binding XXXXXX-XXXXXX-XXXXXX \
 ### 4. GCP Console — Create Budget
 
 1. Go to **Billing → Budgets & alerts → Create budget**
-2. Name: `tong-chi-phi-thang`
+2. Name: `monthly-total-cost`
 3. Scope: Billing account (no project filter)
 4. Budget type: Specified amount
 5. Amount: Your budget (e.g., 1,000,000 VND)
