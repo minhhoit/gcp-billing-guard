@@ -1,22 +1,22 @@
 # Copilot Context — GCP Billing Guard
 
-## Mục tiêu
-Tự động disable billing GCP khi tổng chi phí billing account đạt 100% budget.
-Tự động re-enable lúc 00:00 ngày 1 hàng tháng.
+## Objective
+Automatically disable GCP billing when total cost on a billing account reaches 100% of the budget.
+Automatically re-enable at 00:00 on the 1st of each month.
 
 ## Stack
 - Python 3.11, Cloud Functions Gen2, Pub/Sub, Cloud Scheduler, Terraform >= 1.5
 
-## Quy tắc quan trọng
-- Hàm disable_billing() luôn return bình thường, không raise exception
-  (tránh Pub/Sub retry vô hạn)
-- Hàm reenable_billing() trả về HTTP 200 + JSON summary mọi trường hợp
-- Tất cả log dưới dạng JSON structured
-- projectId không có trong payload = billing account level alert → disable TẤT CẢ
-- Master list projects lưu trong config/projects.json
+## Important Rules
+- disable_billing() must always return normally, never raise exceptions
+  (prevents infinite Pub/Sub retry loops)
+- reenable_billing() must always return HTTP 200 + JSON summary
+- All logs must be JSON structured
+- No projectId in payload = billing account level alert → disable ALL projects
+- Master project list stored in config/projects.json
 - Billing OFF → skip re-enable
 - Billing ON  → skip disable
 
-## File quan trọng nhất
-- config/projects.json       — master list, thêm project mới vào đây
-- terraform/terraform.tfvars — không commit, tạo từ .tfvars.example
+## Key Files
+- config/projects.json       — master list, add new projects here
+- terraform/terraform.tfvars — do not commit, create from .tfvars.example
