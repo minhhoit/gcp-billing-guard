@@ -1,0 +1,21 @@
+{
+  "billing_account_id": "015104-4F063B-319779",
+  "projects": [
+    {
+      "project_id": "story-loom-app",
+      "display_name": "story-loom-app"
+    },
+    {
+      "project_id": "tssaudio-web",
+      "display_name": "tssaudio-web"
+    },
+    {
+      "project_id": "losteras-app",
+      "display_name": "losteras-app"
+    },
+    {
+      "project_id": "gearpickle",
+      "display_name": "gearpickle"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "billing_account_id": "012345-6789AB-CDEF01",
+  "projects": [
+    {
+      "project_id": "test-project-1",
+      "display_name": "Test Project 1"
+    },
+    {
+      "project_id": "test-project-2",
+      "display_name": "Test Project 2"
+    }
+  ]
+}
